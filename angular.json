@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bulma/css/bulma.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "top-ramen-restaurants"
+    }
+  },
+  "defaultProject": "top-ramen-restaurants",
+  "cli": {
+    "analytics": false
+  }
 }
