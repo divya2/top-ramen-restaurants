@@ -1,0 +1,16 @@
+<section class="section">
+  <div class="container">
+  <div class="columns is-multiline">
+
+    
+    <div class="column is-4" *ngFor="let list of restaurants | async">
+      <div class="card">
+        <div class="card-content">
+          <a routerLink="/restaurants">{{ list.brand }}</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  </section>
