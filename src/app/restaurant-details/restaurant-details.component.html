@@ -2,11 +2,14 @@
   <div class="container">
   <div class="columns is-multiline">
 
-    
-    <div class="column is-4" *ngFor="let list of restaurants | async">
+    <div class="column is-4" >
       <div class="card">
         <div class="card-content">
-          <a routerLink="/restaurants">{{ list.brand }}</a>
+          <ul>
+            <li *ngFor="let res in restaurants">
+              {{ res | json }}
+            </li>
+          </ul>
         </div>
       </div>
     </div>

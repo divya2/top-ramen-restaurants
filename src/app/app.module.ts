@@ -6,11 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
+import { RestaurantSearchComponent } from './restaurant-search/restaurant-search.component';
+import { RestaurantTopListComponent } from './restaurant-top-list/restaurant-top-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    RestaurantSearchComponent,
+    RestaurantTopListComponent,
+    RestaurantSearchComponent
   ],
   imports: [
     BrowserModule,

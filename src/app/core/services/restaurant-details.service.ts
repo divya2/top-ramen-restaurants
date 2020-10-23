@@ -5,11 +5,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class RestaurantDetailsService {
-  apiUrl = 'http://starlord.hackerearth.com/TopRamen';
   constructor(private http: HttpClient) { }
 
   // tslint:disable-next-line: typedef
   getRestaurants() {
-    return this.http.get(`${this.apiUrl}?per_page=10`);
+    const apiUrl = 'http://starlord.hackerearth.com/TopRamen';
+    return this.http.get(`${apiUrl}?per_page=10`);
   }
 }
