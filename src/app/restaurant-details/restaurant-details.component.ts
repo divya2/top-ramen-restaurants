@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular/core';
 import { RestaurantDetailsService } from 'src/app/core/services/restaurant-details.service';
 import { IRestaurants } from '../core/models/restaurant.model';
 
@@ -8,16 +8,24 @@ import { IRestaurants } from '../core/models/restaurant.model';
   styleUrls: ['./restaurant-details.component.scss']
 })
 export class RestaurantDetailsComponent implements OnInit {
-  restaurants: Array<IRestaurants> = [];
-  constructor(private restaurantService: RestaurantDetailsService) { }
+  restaurants;
+  constructor(private zone: NgZone, private restaurantService: RestaurantDetailsService) {
+    this.restaurants = new Array<IRestaurants>();
+   }
 
   ngOnInit(): void {
-    // this.restaurants = this.restaurantService.getRestaurants();
-    this.restaurantService.getRestaurants().subscribe((data: Array<IRestaurants>) => {
-      this.restaurants = data;
-      console.log('restaurants', this.restaurants);
-    });
+    this.getRestaurantDetails();
   }
+
+  getRestaurantDetails(): void {
+    this.restaurantService.getRestaurants()
+        .subscribe(data => {
+             this.zone.run(() => {
+                 this.restaurants = data;
+                 console.log(this.restaurants[0]);
+             });
+    });
+}
 
 
 }

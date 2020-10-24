@@ -1,6 +1,29 @@
 <section class="section">
   <div class="container">
     <app-restaurant-search></app-restaurant-search>
-    <app-restaurant-top-list></app-restaurant-top-list>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Brand</th>
+          <th scope="col">Variety</th>
+          <th scope="col">Country</th>
+          <th scope="col">Stars</th>
+          <th scope="col">Style</th>
+          <th scope="col">Top Ten</th>
+        </tr>
+      </thead>
+    <ng-container *ngIf="restaurants.length">
+        <tbody >
+          <tr *ngFor="let list of restaurants; let i = index">
+            <td>{{list["Brand"]}}</td>
+            <td>{{list["Variety"]}}</td>
+            <td>{{list["Country"]}}</td>
+            <td>{{list["Stars"]}}</td>
+            <td>{{list["Style"]}}</td>
+            <td>{{list["Top Ten"]}}</td>
+          </tr>
+        </tbody>
+      </ng-container>
+    </table>
   </div>
   </section>

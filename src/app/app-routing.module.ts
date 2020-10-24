@@ -13,6 +13,10 @@ const routes: Routes = [{
 {
   path: 'restaurants',
   component: RestaurantDetailsComponent
+},
+{
+  path: 'top-ten',
+  component: RestaurantTopListComponent
 }];
 
 @NgModule({
