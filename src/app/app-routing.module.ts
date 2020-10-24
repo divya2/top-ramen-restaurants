@@ -13,14 +13,6 @@ const routes: Routes = [{
 {
   path: 'restaurants',
   component: RestaurantDetailsComponent
-},
-{
-  path: 'top-list',
-  component: RestaurantTopListComponent
-},
-{
-  path: ':brand',
-  component: RestaurantSearchComponent
 }];
 
 @NgModule({

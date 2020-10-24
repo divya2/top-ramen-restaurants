@@ -8,12 +8,13 @@ import { CoreModule } from './core/core.module';
 import { HomeComponent } from './home/home.component';
 import { RestaurantSearchComponent } from './restaurant-search/restaurant-search.component';
 import { RestaurantTopListComponent } from './restaurant-top-list/restaurant-top-list.component';
+import { RestaurantDetailsComponent } from './restaurant-details/restaurant-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    RestaurantSearchComponent,
+    RestaurantDetailsComponent,
     RestaurantTopListComponent,
     RestaurantSearchComponent
   ],
@@ -24,7 +25,7 @@ import { RestaurantTopListComponent } from './restaurant-top-list/restaurant-top
     CommonModule,
     HttpClientModule
   ],
-  exports: [ HttpClientModule],
+  exports: [ HttpClientModule ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
