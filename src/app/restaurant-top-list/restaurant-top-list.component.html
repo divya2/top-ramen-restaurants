@@ -1,1 +1,14 @@
-<p>restaurant-top-list works!</p>
+<section class="section has-background-grey-lighter">
+  <div class="box" *ngFor="let list of sorted">
+    <article class="media">
+      <div class="content">
+        <p><strong>Brand: </strong>{{list["Brand"]}}</p>
+        <p><strong>Variety: </strong>{{list["Variety"]}}</p>
+        <p><strong>Country: </strong>{{list["Country"]}}</p>
+        <p><strong>Stars: </strong>{{list["Stars"]}}</p>
+        <p><strong>Style: </strong>{{list["Style"]}}</p>
+        <p><strong>Top Ten: </strong>{{list["Top Ten"]}}</p>
+      </div>
+    </article>
+  </div>
+</section>

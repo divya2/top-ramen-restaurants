@@ -15,7 +15,7 @@ const routes: Routes = [{
   component: RestaurantDetailsComponent
 },
 {
-  path: 'top-ten',
+  path: 'top-list',
   component: RestaurantTopListComponent
 }];
 
