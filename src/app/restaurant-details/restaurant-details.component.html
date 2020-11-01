@@ -1,6 +1,6 @@
 <section class="section has-background-grey-lighter">
   <div class="container">
-    <app-restaurant-search></app-restaurant-search>
+    <app-restaurant-search (searchValueChanged)="updateFilter($event)"></app-restaurant-search>
     <table class="table table-striped is-fullwidth">
       <thead>
         <tr>
@@ -14,7 +14,7 @@
       </thead>
     <ng-container *ngIf="restaurants.length">
         <tbody>
-          <tr *ngFor="let list of restaurants; let i = index">
+          <tr *ngFor="let list of restaurants">
             <td>{{list["Brand"]}}</td>
             <td>{{list["Variety"]}}</td>
             <td>{{list["Country"]}}</td>

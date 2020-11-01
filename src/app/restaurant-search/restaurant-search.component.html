@@ -1,6 +1,6 @@
 <div class="panel-block pb-6">
   <p class="control has-icons-left">
-    <input class="input" type="text" placeholder="Search">
+    <input class="input" type="text" placeholder="Search" [(ngModel)]="searchText" (change)="changedSearchText()" autocomplete="off">
     <span class="icon is-left">
       <i class="fas fa-search" aria-hidden="true"></i>
     </span>

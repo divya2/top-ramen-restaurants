@@ -10,6 +10,7 @@ import { IRestaurants } from '../core/models/restaurant.model';
 })
 export class RestaurantDetailsComponent implements OnInit {
   restaurants;
+  searchText: string;
 
   constructor(private zone: NgZone, private restaurantService: RestaurantDetailsService) {
     this.restaurants = new Array<IRestaurants>();
@@ -28,5 +29,9 @@ export class RestaurantDetailsComponent implements OnInit {
             });
             this.restaurantService.setData(data);
     }, error => console.error(error));
+  }
+
+  updateFilter(searchText: string): void {
+    this.searchText = searchText;
   }
 }
