@@ -1,4 +1,4 @@
-import { Component, NgZone, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit, SimpleChanges } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { RestaurantDetailsService } from 'src/app/core/services/restaurant-details.service';
 import { IRestaurants } from '../core/models/restaurant.model';
@@ -10,7 +10,7 @@ import { IRestaurants } from '../core/models/restaurant.model';
 })
 export class RestaurantDetailsComponent implements OnInit {
   restaurants;
-  searchText: string;
+  searchModel: string;
 
   constructor(private zone: NgZone, private restaurantService: RestaurantDetailsService) {
     this.restaurants = new Array<IRestaurants>();
@@ -32,6 +32,7 @@ export class RestaurantDetailsComponent implements OnInit {
   }
 
   updateFilter(searchText: string): void {
-    this.searchText = searchText;
+    this.searchModel = searchText;
   }
+
 }

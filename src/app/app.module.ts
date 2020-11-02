@@ -10,7 +10,7 @@ import { RestaurantSearchComponent } from './restaurant-search/restaurant-search
 import { RestaurantTopListComponent } from './restaurant-top-list/restaurant-top-list.component';
 import { RestaurantDetailsComponent } from './restaurant-details/restaurant-details.component';
 import { FormsModule } from '@angular/forms';
-import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ListFilterPipe } from './restaurant-search/list-filter-pipe';
 
 
 @NgModule({
@@ -19,7 +19,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     HomeComponent,
     RestaurantDetailsComponent,
     RestaurantTopListComponent,
-    RestaurantSearchComponent
+    RestaurantSearchComponent,
+    ListFilterPipe
   ],
   imports: [
     BrowserModule,
@@ -27,10 +28,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     CoreModule,
     CommonModule,
     FormsModule,
-    HttpClientModule,
-    Ng2SearchPipeModule
+    HttpClientModule
   ],
-  exports: [ HttpClientModule, Ng2SearchPipeModule ],
+  exports: [ HttpClientModule ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
