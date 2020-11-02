@@ -8,8 +8,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 — Implemented a functionality to list top restaurants of different years. 
 — Provided a search box using which users can call for restaurant details.
 
-![home](src\assets\img\home.PNG)
-
+![home](https://github.com/divya2/top-ramen-restaurants/blob/master/src/assets/img/home.PNG)
+![home](https://github.com/divya2/top-ramen-restaurants/blob/master/src/assets/img/restaurants.PNG)
+![home](https://github.com/divya2/top-ramen-restaurants/blob/master/src/assets/img/top_list.PNG)
 
 ## Development server
 
